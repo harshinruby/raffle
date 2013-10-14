@@ -2,14 +2,25 @@
 
 <div data-ng-controller = "RaffleCtrl">
 	<form>
-		<input type="text" data-ng-model = "newName.name"> 
-	</form>
-
-	<ul>
+		<input type="text" data-ng-model = "fname"> {{fname}}
+		<ul>
 		<li data-ng-repeat = "entry in entries">
 			{{entry.name}}
 		</li>
 	</ul>
+	</form>
+
+	
 
 </div>
+
+<script>
+	function RaffleCtrl($scope){
+	$scope.entries = [
+		{name: "Rutika"}
+		{name: "Harshavardhan"}
+		{name: "Devang"}
+	];
+	}
+</script>
 
